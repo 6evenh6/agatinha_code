@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detector de código</title>
+<style>
+    .red-text {
+        color: red;
+    }
+</style>
+</head>
+<body>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const inputField = document.getElementById('inputField');
+    const outputDiv = document.getElementById('outputDiv');
+
+    inputField.addEventListener('input', function(event) {
+        const inputValue = event.target.value.toLowerCase();
+        if (inputValue.includes('code')) {
+            outputDiv.innerHTML = '<span class="red-text">O segredo é que eu também te amo <3</span>';
+        } else {
+            outputDiv.innerHTML = '';
+        }
+    });
+});
+</script>
+
+<input type="text" id="inputField" placeholder="Digite aqui...">
+<div id="outputDiv"></div>
+
+</body>
+</html>
